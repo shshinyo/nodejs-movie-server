@@ -14,6 +14,15 @@ Solution of task contains tree images :
 # API Docs
  
 1. you can find Apis Docs Following this Link http://localhost:4000/explorer/ 
+  1. to Test add movie or get movies :-
+    1. get a valid token from auth server using
+       `  curl --location --request POST '0.0.0.0:3000/auth' \
+          --header 'Content-Type: application/json' \
+          --data-raw '{
+         "username": "basic-thomas",
+         "password": "sR-_pcoow-27-6PAwCD8"
+        }'` 
+     2- register JWT Token in swagger ui    
   
 # Test Cases 
 1. To Run Test cases.

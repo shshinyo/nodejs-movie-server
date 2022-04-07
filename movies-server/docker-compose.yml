@@ -1,0 +1,18 @@
+version: "3.2"
+services:
+  monogo_db:
+    container_name: db_container
+    image: mongo:latest
+    restart: always
+  app:
+    build: .
+    ports:
+      - 4000:4000
+    environment:
+      PORT: 4000
+      JWT_SECRET : secret
+      MONGO_URL : mongodb://monogo_db:27017/movies
+    depends_on:
+      - monogo_db
+
+

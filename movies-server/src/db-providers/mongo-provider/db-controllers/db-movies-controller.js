@@ -4,7 +4,6 @@ const Max_NUM_MOVIEs_BASIc = 5;
 
 const dbGetMovies = async () => {
     let movies = await Movie.find();
-    console.log(movies)
     return movies
 
 }
